@@ -12,7 +12,7 @@
     </ul>
   </div>
   <%end%>
-  <% if @post.errors[:title].any?  %>
+  <% if @post.errors[:title].empty?  %>
     <div class="field">
   <%else%>
     <div class="field_with_errors">
@@ -21,7 +21,7 @@
     <%= text_field_tag "title", @post.title %>
   </div>
 
-  <% if @post.errors[:category].any?  %>
+  <% if @post.errors[:category].empty?  %>
     <div class="field">
   <%else%>
     <div class="field_with_errors">
@@ -35,7 +35,7 @@
     </p>
   </div>
 
-  <% if @post.errors[:content].any?  %>
+  <% if @post.errors[:content].empty?  %>
     <div class="field">
   <%else%>
     <div class="field_with_errors">
