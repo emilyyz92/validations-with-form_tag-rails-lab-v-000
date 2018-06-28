@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    if @post.create(post_params)
+    if @post = Post.create(post_params)
       redirect_to post_path(@post)
     else
       render :new
