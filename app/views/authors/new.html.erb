@@ -5,7 +5,7 @@
     <%= text_field_tag "name" %>
   </div>
 
-  <div class="field">
+  <div class="field<%=field_with_errors if @author.errors[:email].any?%>">
     <%= label_tag "email", "Email" %>
     <%= text_field_tag "email" %>
   </div>
