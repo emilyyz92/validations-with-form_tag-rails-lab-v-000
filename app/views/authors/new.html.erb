@@ -28,7 +28,7 @@
     <%= text_field_tag "email", @author.email %>
   </div>
 
-  <% if @author.errors[:name].any?  %>
+  <% if @author.errors[:phone_number].any?  %>
     <div class="field">
   <%else%>
     <div class="field_with_errors">
