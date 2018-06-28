@@ -10,7 +10,11 @@
   </div>
   <%end%>
 
-  <div class="field<%='field_with_errors' if @author.errors[:name].any?%>">
+  <% if @author.errors[:email].any?  %>
+    <div class="field">
+  <%else%>
+    <div class="field_with_errors">
+  <%end%>
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name", @author.name %>
   </div>
