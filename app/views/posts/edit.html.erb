@@ -12,7 +12,11 @@
     </ul>
   </div>
   <%end%>
-  <div class="field<%='field_with_errors' if @post.errors[:title].any?%>">
+  <% if @author.errors[:name].any?  %>
+    <div class="field">
+  <%else%>
+    <div class="field_with_errors">
+  <%end%>
     <%= label_tag "title", "Title" %>
     <%= text_field_tag "title", @post.title %>
   </div>
